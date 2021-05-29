@@ -1,20 +1,3 @@
-<!-- selected hero details display -->
-<div *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div><span>id:</span> {{ selectedHero.id }}</div>
-  <div><span>name:</span> {{ selectedHero.name }}</div>
-
-  <!-- edit selected hero -->
-  <label for="name">Hero name:</label>
-  <input
-    type="text"
-    name="name"
-    id="name"
-    [(ngModel)]="selectedHero.name"
-    placeholder="name"
-  />
-</div>
-
 <!-- heroes list -->
 <ul class="heroes">
   <li
@@ -25,3 +8,5 @@
     <span class="badge">{{ hero.id }}</span> {{ hero.name }}
   </li>
 </ul>
+<!-- selected hero details display -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
